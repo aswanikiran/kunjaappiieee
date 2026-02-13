@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Kunjaappiieee ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(135deg,#ff758c,#ff7eb3);color:white;text-align:center;overflow-x:hidden}
+.container{padding:40px 20px}
+h1{font-family:'Great Vibes',cursive;font-size:3.2rem;margin-top:10px}
+.card{background:rgba(255,255,255,0.18);backdrop-filter:blur(12px);border-radius:20px;padding:25px;margin:20px auto;max-width:520px;box-shadow:0 10px 30px rgba(0,0,0,0.25)}
+button{background:#ff2d55;border:none;padding:14px 26px;border-radius:50px;color:white;font-size:1.1rem;cursor:pointer;transition:.3s;margin:8px}
+button:hover{transform:scale(1.1)}
+.hidden{display:none}
+.photo{width:100%;border-radius:18px;margin-top:18px;box-shadow:0 10px 25px rgba(0,0,0,0.35)}
+.heart{position:fixed;color:#ff2d55;font-size:22px;animation:fall linear forwards}
+@keyframes fall{from{transform:translateY(-10vh);opacity:1}to{transform:translateY(110vh);opacity:0}}
+.yes{background:#00c853}
+.no{background:#555;position:relative}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Happy Valentine's Day 💖</h1>
+<div class="card">
+<p>To my kunjaappiieee 😘</p>
+<p>I didn’t want to just send a message today...</p>
+<p>I wanted to create a memory for you ✨</p>
+<button onclick="show1()">Start Our Story</button>
+</div>
+
+<div id="s1" class="card hidden">
+<h2>The day you entered my life ❤️</h2>
+<img class="photo" src="Screenshot_20260213-081603.png">
+<p>Since that moment... everything became brighter.</p>
+<button onclick="show2()">Next</button>
+</div>
+
+<div id="s2" class="card hidden">
+<h2>Your smile = My happiness 😊</h2>
+<img class="photo" src="Screenshot_20260213-081458.png">
+<p>No matter how my day goes... one smile from you fixes everything.</p>
+<button onclick="show3()">Next</button>
+</div>
+
+<div id="s3" class="card hidden">
+<h2>Our little adventures 🌍</h2>
+<img class="photo" src="Screenshot_20260213-081438.png">
+<p>I don't need a perfect place... I just need you beside me.</p>
+<button onclick="show4()">Next</button>
+</div>
+
+<div id="s4" class="card hidden">
+<h2>My safe place 🫶</h2>
+<img class="photo" src="Screenshot_20260213-081409.png">
+<p>With you... I feel calm, loved and complete.</p>
+<button onclick="show5()">One last thing...</button>
+</div>
+
+<div id="s5" class="card hidden">
+<h2>I Love You Kunjaappiieee ❤️</h2>
+<img class="photo" src="Screenshot_20260213-081325.png">
+<p>Today, tomorrow and forever... I choose you. Always.</p>
+<h3>Will you stay with me forever? 💍</h3>
+<button class="yes" onclick="accepted()">YES 😍</button>
+<button class="no" onmouseover="moveNo(this)">No 🙈</button>
+</div>
+
+<div id="final" class="card hidden">
+<h1>Yayyyyy!!! ❤️</h1>
+<p>I knew you’d say YES 😘</p>
+<p>You just made me the happiest person alive 💞</p>
+</div>
+</div>
+
+<audio id="music" loop>
+<source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function play(){document.getElementById('music').play();hearts()}
+function show1(){document.getElementById('s1').classList.remove('hidden');play()}
+function show2(){document.getElementById('s2').classList.remove('hidden')}
+function show3(){document.getElementById('s3').classList.remove('hidden')}
+function show4(){document.getElementById('s4').classList.remove('hidden')}
+function show5(){document.getElementById('s5').classList.remove('hidden')}
+function accepted(){document.getElementById('final').classList.remove('hidden')}
+function moveNo(btn){btn.style.position='absolute';btn.style.left=Math.random()*80+'%';btn.style.top=Math.random()*80+'%'}
+function hearts(){setInterval(()=>{const h=document.createElement('div');h.className='heart';h.innerHTML='❤';h.style.left=Math.random()*100+'vw';h.style.animationDuration=(Math.random()*3+3)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),6000)},300)}
+</script>
+</body>
+</html>
 
