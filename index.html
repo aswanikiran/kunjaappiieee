@@ -1,72 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>For My Kunjaappiieee ❤️</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
 <style>
-  body{margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(135deg,#ff758c,#ff7eb3);color:#fff;text-align:center;overflow-x:hidden}
-  .container{padding:40px 20px}
-  h1{font-family:'Great Vibes',cursive;font-size:3.2rem;margin-top:10px}
-  .card{background:rgba(255,255,255,0.18);backdrop-filter:blur(12px);border-radius:20px;padding:25px;margin:20px auto;max-width:520px;box-shadow:0 10px 30px rgba(0,0,0,0.25)}
-  button{background:#ff2d55;border:none;padding:14px 26px;border-radius:50px;color:white;font-size:1.1rem;cursor:pointer;transition:.3s}
-  button:hover{transform:scale(1.1)}
-  .hidden{display:none}
-  .photo{width:100%;border-radius:18px;margin-top:18px;box-shadow:0 10px 25px rgba(0,0,0,0.35)}
-  .heart{position:fixed;color:#ff2d55;font-size:22px;animation:fall linear forwards}
-  @keyframes fall{from{transform:translateY(-10vh);opacity:1}to{transform:translateY(110vh);opacity:0}}
+body{
+  margin:0;
+  font-family: 'Segoe UI', cursive;
+  background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+  color:white;
+  text-align:center;
+}
+.container{padding:30px}
+h1{font-size:40px;margin-top:30px}
+p{font-size:20px}
+.gallery img{
+  width:90%;
+  max-width:350px;
+  border-radius:20px;
+  margin:20px auto;
+  display:none;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+button{
+  background:white;
+  color:#ff4b7d;
+  border:none;
+  padding:15px 25px;
+  font-size:18px;
+  border-radius:30px;
+  cursor:pointer;
+  margin-top:20px;
+}
+.heart{font-size:50px;animation:beat 1s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
 </style>
 </head>
 <body>
 <div class="container">
-  <h1>Happy Valentine's Day 💖</h1>
-  <div class="card">
-    <p>To my kunjaappiieee 😘</p>
-    <p>I didn't want to just send a message today...</p>
-    <p>I wanted to create a memory for you ✨</p>
-    <button onclick="show1()">Start Our Story</button>
-  </div>
+<h1>Happy Valentine's Day ❤️</h1>
+<p>You are my favorite notification every day 💌</p>
+<div class="heart">💖</div>
+<button onclick="startSurprise()">Tap for Surprise</button>
 
-  <div id="s1" class="card hidden">
-    <h2>The day you entered my life ❤️</h2>
-    <img class="photo" src="photo1.jpg" />
-    <p>Since that moment... everything became brighter.</p>
-    <button onclick="show2()">Next</button>
-  </div>
-
-  <div id="s2" class="card hidden">
-    <h2>Your smile = My happiness 😊</h2>
-    <img class="photo" src="photo2.jpg" />
-    <p>No matter how my day goes... one smile from you fixes everything.</p>
-    <button onclick="show3()">Next</button>
-  </div>
-
-  <div id="s3" class="card hidden">
-    <h2>Our little adventures 🌍</h2>
-    <img class="photo" src="photo3.jpg" />
-    <p>I don't need a perfect place... I just need you beside me.</p>
-    <button onclick="show4()">Next</button>
-  </div>
-
-  <div id="s4" class="card hidden">
-    <h2>My safe place 🫶</h2>
-    <img class="photo" src="photo4.jpg" />
-    <p>With you... I feel calm, loved and complete.</p>
-    <button onclick="show5()">One last thing...</button>
-  </div>
-
-  <div id="s5" class="card hidden">
-    <h2>I Love You Kunjaappiieee ❤️</h2>
-    <img class="photo" src="photo5.jpg" />
-    <p>Today, tomorrow and forever...
-    I choose you. Always.</p>
-    <h3>Will you stay with me forever? 💍</h3>
-  </div>
+<div class="gallery">
+<img src="Screenshot_20260213-081603.png">
+<img src="Screenshot_20260213-081458.png">
+<img src="Screenshot_20260213-081438.png">
+<img src="Screenshot_20260213-081409.png">
+<img src="Screenshot_20260213-081325.png">
+</div>
 </div>
 
-<audio id="music" loop>
-  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8a7a6c0e19.mp3?filename=romantic-love-112199.mp3" type="audio/mpeg">
+<script>
+function startSurprise(){
+  const images=document.querySelectorAll('.gallery img');
+  let i=0;
+  images[0].style.display='block';
+  setInterval(()=>{
+    images[i].style.display='none';
+    i=(i+1)%images.length;
+    images[i].style.display='block';
+  },2000);
+}
+</script>
+</body>
+</html>  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8a7a6c0e19.mp3?filename=romantic-love-112199.mp3" type="audio/mpeg">
 </audio>
 
 <script>
